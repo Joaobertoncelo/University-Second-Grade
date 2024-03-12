@@ -1,0 +1,47 @@
+package Atribuicoes;
+
+
+public class Pessoa {
+    private int idPessoa;
+    private String nome, cpf, endereco, telefone;
+
+    protected int getIdPessoa() {
+        return idPessoa;
+    }
+
+    protected void setIdPessoa(int idPessoa) {
+        this.idPessoa = idPessoa;
+    }
+
+    protected String getNome() {
+        return nome;
+    }
+
+    protected void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    protected String getCpf() {
+        return cpf;
+    }
+
+    protected void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    protected String getEndereco() {
+        return endereco;
+    }
+
+    protected void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    protected String getTelefone() {
+        return telefone;
+    }
+
+    protected void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+}

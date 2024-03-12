@@ -1,0 +1,45 @@
+package programapaciente;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ProgramaPaciente {
+
+    public static void main(String[] args) {
+        ArrayList<String> nomePaciente = new ArrayList<String>();
+        ArrayList<String> cpfPaciente = new ArrayList<String>();
+        ArrayList<String> enderecoPaciente = new ArrayList<String>();
+        Scanner sc = new Scanner(System.in);
+        String c = new String();
+        
+        do{
+            System.out.println("Nome do Paciente: ");
+            String nome = sc.nextLine();
+            nomePaciente.add(nome);
+            
+            System.out.println("cpf do Paciente: ");
+            String cpf = sc.nextLine();
+            cpfPaciente.add(cpf);
+            
+            System.out.println("endereco do Paciente: ");
+            String endereco = sc.nextLine();
+            enderecoPaciente.add(endereco);
+            
+            System.out.println("Deseja adicionar mais um cliente?(S/N)");
+            c = sc.nextLine();
+            
+        }while(c.equalsIgnoreCase("s"));
+        
+        sc.close();
+        
+        for(String nome : nomePaciente){
+            System.out.println(nomePaciente);
+        }
+        for(String cpf : cpfPaciente){
+            System.out.println(cpfPaciente);
+        }
+        for(String endereco : enderecoPaciente){
+            System.out.println(enderecoPaciente);
+        }
+    }
+    
+}

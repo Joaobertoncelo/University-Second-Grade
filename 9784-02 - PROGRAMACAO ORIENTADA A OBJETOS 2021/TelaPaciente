@@ -1,0 +1,32 @@
+package Atribuicoes;
+
+import java.util.Scanner;
+
+
+public class TelaPaciente extends Paciente {
+    Paciente p;
+    public Paciente criarPaciente() {
+        Scanner scan = new Scanner(System.in);
+        p = new Paciente();
+        System.out.println("Dê o nome do paciente: ");
+        String resposta = scan.nextLine();
+        p.setNome(resposta);
+        System.out.println("Dê o cpf do paciente: ");
+        resposta = scan.nextLine();
+        p.setCpf(resposta);
+        System.out.println("Dê o endereco do paciente: ");
+        resposta = scan.nextLine();
+        p.setEndereco(resposta);
+        System.out.println("Dê o telefone do paciente: ");
+        resposta = scan.nextLine();
+        p.setTelefone(resposta);
+        System.out.println("Dê a idade do paciente: ");
+        p.setIdade(scan.nextInt());
+        System.out.println("Dê o peso do paciente: ");
+        p.setPeso(scan.nextFloat());
+        System.out.println("Dê a altura do paciente: ");
+        p.setAltura(scan.nextFloat());
+        scan.close();
+        return p; 
+    }
+}

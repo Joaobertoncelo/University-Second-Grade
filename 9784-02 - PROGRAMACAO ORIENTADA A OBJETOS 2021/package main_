@@ -1,0 +1,22 @@
+package main;
+
+import coisos.ControlePaciente;
+import coisos.TelaPaciente;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+public class Main {
+
+    public static void main(String[] args) {
+        String caminho = "/tmp/guest-tswu09/Área de Trabalho/";
+        String nome = "pacientes.txt";
+        TelaPaciente tp = new TelaPaciente();
+        try {
+            ControlePaciente cp = new ControlePaciente(nome, caminho);
+            cp.gravarArquivo(tp.criarPaciente());
+        } catch (IOException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+}

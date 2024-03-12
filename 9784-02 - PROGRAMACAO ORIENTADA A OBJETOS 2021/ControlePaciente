@@ -1,0 +1,36 @@
+package Atribuicoes;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class ControlePaciente {
+    FileWriter fw;
+    BufferedWriter bw;
+    
+    public ControlePaciente(String nome, String caminho) throws IOException {
+        String caminhoAbsoluto = caminho + nome;
+        abrirArquivo(caminhoAbsoluto);
+    }
+    
+    private void abrirArquivo(String caminho) throws IOException {
+        fw = new FileWriter(caminho, true);
+        bw = new BufferedWriter(fw);
+    }
+    
+    public void gravarArquivo(Paciente p) throws IOException {
+        bw.write("Nome: " + p.getNome() + "\n");
+        bw.write("CPF: " + p.getCpf() + "\n");
+        bw.write("Endereço: " + p.getEndereco() + "\n");
+        bw.write("Telefone: " + p.getTelefone() + "\n");
+        bw.write("Idade: " + String.valueOf(p.getIdade()) + "\n");
+        bw.write("Altura: " + String.valueOf(p.getAltura()) + "\n");
+        bw.write("Peso: " + String.valueOf(p.getPeso()) + "\n\n");
+        fecharArquivo();
+    }
+    
+    private void fecharArquivo() throws IOException {
+        bw.close();
+        fw.close();
+    }
+}

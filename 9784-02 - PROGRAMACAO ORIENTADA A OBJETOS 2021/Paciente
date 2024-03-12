@@ -1,0 +1,30 @@
+package Atribuicoes;
+
+public class Paciente extends Pessoa {
+    private float peso, altura;
+    private int idade;
+
+    protected float getPeso() {
+        return peso;
+    }
+
+    protected void setPeso(float peso) {
+        this.peso = peso;
+    }
+
+    protected float getAltura() {
+        return altura;
+    }
+
+    protected void setAltura(float altura) {
+        this.altura = altura;
+    }
+
+    protected int getIdade() {
+        return idade;
+    }
+
+    protected void setIdade(int idade) {
+        this.idade = idade;
+    }
+}
